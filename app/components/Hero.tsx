@@ -27,7 +27,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="z-10 px-4 h-[900px] max-w-4xl text-center mt-6">
+      <div className="z-10 px-4 h-[600px] max-w-4xl text-center mt-6">
         <h1 className="text-3xl md:text-6xl font-bold mb-6 animate__animated animate__fadeIn animate__delay-1s">
           Welcome to Kheowzoo
         </h1>
@@ -35,7 +35,7 @@ export default function Hero() {
           Contract Address
         </h2>
         <p
-          className="text-base md:text-base px-4 text-white underline cursor-pointer mt-2 animate__animated animate__fadeIn animate__delay-3s"
+          className="text-lg font-medium mx-4  md:text-2xl px-8 text-white underline cursor-pointer mt-2 animate__animated animate__fadeIn animate__delay-3s"
           onClick={copyToClipboard}
         >
           {contractAddress}
@@ -44,7 +44,7 @@ export default function Hero() {
           href={`https://solscan.io/token/${contractAddress}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="block mt-4 text-green-500 text-lg underline animate__animated animate__fadeIn animate__delay-3s"
+          className="block mt-4 text-[#5a3310] text-2xl font-bold underline animate__animated animate__fadeIn animate__delay-3s"
         >
           View on Solscan
         </a>
