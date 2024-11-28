@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom global styles */
+body {
+  @apply bg-cover bg-center bg-no-repeat;
+  background-image: url("/bg.jpg");
+}
