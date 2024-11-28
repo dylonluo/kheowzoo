@@ -3,12 +3,13 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+//import IconGrid from "./IconGrid";
 
-export default function Hero() {
-  const contractAddress = "AiQcnL5gPjEXVH1E1FGUdN1WhPz4qXAZfQJxpGrJpump";
-  const [showToast, setShowToast] = useState(false);
+export default function Hero(): JSX.Element {
+  const contractAddress: string = "AiQcnL5gPjEXVH1E1FGUdN1WhPz4qXAZfQJxpGrJpump";
+  const [showToast, setShowToast] = useState<boolean>(false);
 
-  const copyToClipboard = () => {
+  const copyToClipboard = (): void => {
     navigator.clipboard.writeText(contractAddress);
     setShowToast(true);
     setTimeout(() => setShowToast(false), 5000);
@@ -27,7 +28,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="z-10 px-4 h-[600px] max-w-4xl text-center mt-6">
+      <div className="z-10 px-4 max-w-4xl text-center mt-6">
         <h1 className="text-3xl md:text-6xl font-bold mb-6 animate__animated animate__fadeIn animate__delay-1s">
           Welcome to Kheowzoo
         </h1>
@@ -35,7 +36,7 @@ export default function Hero() {
           Contract Address
         </h2>
         <p
-          className="text-lg font-medium mx-4  md:text-2xl px-8 text-white underline cursor-pointer mt-2 animate__animated animate__fadeIn animate__delay-3s"
+          className="text-lg font-medium mx-4 md:text-2xl px-8 text-white underline cursor-pointer mt-2 animate__animated animate__fadeIn animate__delay-3s"
           onClick={copyToClipboard}
         >
           {contractAddress}
@@ -58,6 +59,9 @@ export default function Hero() {
           Buy Now
         </Link>
       </div>
+
+      {/* Include the IconGrid component */}
+   
 
       {showToast && (
         <div className="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow-md animate__animated animate__fadeInUp">
