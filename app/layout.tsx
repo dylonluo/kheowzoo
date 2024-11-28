@@ -4,8 +4,6 @@ import type { Metadata } from "next";
 //import Footer from "./components/Footer";
 import "./globals.css";
 
-
-
 export const metadata: Metadata = {
   title: "Kheowzoo",
   description:
@@ -45,12 +43,8 @@ export default function RootLayout({
           }
         />
       </head>
-      <body
-        className="scroll-smooth"
-      >
-       
-        <main className="min-h-screen">{children}</main>
-   
+      <body className="scroll-smooth">
+        <main className="">{children}</main>
       </body>
     </html>
   );

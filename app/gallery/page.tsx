@@ -2,25 +2,24 @@
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion"; // For animations
+import { motion } from "framer-motion";
 
 const videoPreviews = [
-  { src: "/WebGallery/videos/vid1.mp4" }, // Replace with actual video filenames
-  { src: "/WebGallery/videos/vid2.mp4" },
+  { src: "/WebGallery/videos/kheowzoo_mv.mp4" },
   { src: "/WebGallery/videos/vid1.mp4" },
+  { src: "/WebGallery/videos/vid2.mp4" },
 ];
 
 export default function Gallery() {
   const [activeTab, setActiveTab] = useState("images");
 
-  // Array of image filenames (ensure all images are in the public/WebGallery folder)
   const images = useMemo(
-    () => Array.from({ length: 57 }, (_, i) => `img${i + 1}.jpg`), // Generate img1.jpg to img57.jpg
+    () => Array.from({ length: 57 }, (_, i) => `img${i + 1}.jpg`),
     []
   );
 
   return (
-    <section className="py-8 w-full bg-black" id="gallery">
+    <section className="pt-16 pb-8 w-full bg-black" id="gallery">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-8 text-white">
           Gallery
@@ -59,7 +58,7 @@ export default function Gallery() {
                 <div className="relative w-full h-[260px] overflow-hidden rounded-lg">
                   <video
                     src={video.src}
-                    className="w-full h-full object-fill" // Use object-fill for full-size display
+                    className="w-full h-full object-fill"
                     muted
                     loop
                     autoPlay
@@ -82,17 +81,16 @@ export default function Gallery() {
                     alt={`Gallery Image ${index + 1}`}
                     width={400}
                     height={300}
-                    className="w-full h-[300px] object-cover rounded-lg" // Enforced height for uniformity
+                    className="w-full h-[300px] object-cover rounded-lg"
                   />
                 </div>
               </motion.div>
             ))}
         </div>
 
-        {/* Action Button */}
         <div className="flex justify-center mt-8">
           <Link
-            href="#featured"
+            href="/more"
             className="inline-block bg-color-primary text-color-bg py-3 px-8 rounded-lg text-xl font-semibold hover:underline hover:bg-opacity-90 transition"
           >
             View More
