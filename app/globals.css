@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom global styles */
+/* Theme colors */
+:root {
+  --primary-color: #d4af37; /* Golden yellow */
+  --secondary-color: #8b4513; /* Brown */
+  --accent-color: #228b22; /* Green */
+}
+
+/* Global styles */
 body {
-  @apply bg-cover bg-center bg-no-repeat;
+  @apply bg-cover bg-center bg-no-repeat antialiased;
   background-image: url("/bg.jpg");
+  color: var(--primary-color); /* Default text color */
 }
