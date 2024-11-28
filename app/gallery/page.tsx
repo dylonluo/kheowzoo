@@ -7,19 +7,33 @@ import Header from "../components/Header";
 
 interface VideoPreview {
   src: string;
+  title: string;
+  caption: string;
 }
 
 const videoPreviews: VideoPreview[] = [
-  { src: "/WebGallery/videos/kheowzoo_mv.mp4" },
-  { src: "/WebGallery/videos/vid1.mp4" },
-  { src: "/WebGallery/videos/vid2.mp4" },
+  {
+    src: "/WebGallery/videos/kheowzoo_mv.mp4",
+    title: "Kheowzoo Official Music Video",
+    caption: "Enjoy the groove",
+  },
+  {
+    src: "/WebGallery/videos/vid1.mp4",
+    title: "Wildlife Exploration",
+    caption: "Discover exotic wildlife at Kheowzoo.",
+  },
+  {
+    src: "/WebGallery/videos/vid2.mp4",
+    title: "Khewozoo to the moon!!",
+    caption: "Leggoo!!",
+  },
 ];
 
 export default function Gallery() {
   const [activeTab, setActiveTab] = useState<"images" | "videos">("images");
-  const [selectedVideo, setSelectedVideo] = useState<string | null>(null); // Fullscreen player
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [videoStates, setVideoStates] = useState(
-    videoPreviews.map(() => ({ muted: true })) // Mute all videos initially
+    videoPreviews.map(() => ({ muted: true, isPlaying: false }))
   );
 
   const images = useMemo<string[]>(
@@ -31,6 +45,14 @@ export default function Gallery() {
     setVideoStates((prevState) =>
       prevState.map((state, i) =>
         i === index ? { ...state, muted: !state.muted } : state
+      )
+    );
+  };
+
+  const handleHover = (index: number, play: boolean) => {
+    setVideoStates((prevState) =>
+      prevState.map((state, i) =>
+        i === index ? { ...state, isPlaying: play } : state
       )
     );
   };
@@ -75,15 +97,18 @@ export default function Gallery() {
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
+                  className="relative"
+                  onMouseEnter={() => handleHover(index, true)}
+                  onMouseLeave={() => handleHover(index, false)}
                 >
                   <div className="relative w-full h-[260px] overflow-hidden rounded-lg">
                     <video
                       src={video.src}
                       className="w-full h-full object-fill"
                       muted={videoStates[index].muted}
-                      loop
-                      autoPlay
-                      onClick={() => setSelectedVideo(video.src)} // Open fullscreen
+                      loop={videoStates[index].isPlaying}
+                      autoPlay={videoStates[index].isPlaying}
+                      onClick={() => setSelectedVideo(video.src)}
                     />
                     {/* Mute/Unmute Button */}
                     <button
@@ -92,6 +117,13 @@ export default function Gallery() {
                     >
                       {videoStates[index].muted ? "🔇" : "🔊"}
                     </button>
+                  </div>
+                  {/* Title and Caption */}
+                  <div className="mt-2 text-center">
+                    <h3 className="text-lg font-semibold text-white">
+                      {video.title}
+                    </h3>
+                    <p className="text-sm text-gray-300">{video.caption}</p>
                   </div>
                 </motion.div>
               ))}
