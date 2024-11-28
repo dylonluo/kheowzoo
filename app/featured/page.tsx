@@ -111,10 +111,10 @@ export default function Featured() {
       </div>
       <section
         id="featured"
-        className="w-full h-[600px] mt-8 pt-16 pb-8 bg-transparent"
+        className="w-full h-[600px] mt-8 pt-16 pb-8 bg-black"
       >
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-color-primary">
+          <h2 className="text-3xl font-bold text-center mb-0 text-color-primary">
             Featured Content
           </h2>
 
