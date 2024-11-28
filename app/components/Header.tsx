@@ -9,7 +9,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#8b4513] fixed top-0 left-0 w-full z-50 text-white py-4 px-6 flex justify-between items-center shadow-md">
+    <header className="bg-[#8b4513] fixed top-0 left-0 w-full z-50 text-white  px-6 flex justify-between items-center shadow-md">
       {/* Logo */}
       <div className="flex items-center text-2xl font-bold space-x-2">
         <Image
@@ -25,10 +25,18 @@ export default function Header() {
 
       {/* Social Icons */}
       <div className="flex space-x-4 md:space-x-6">
-        <Link href="https://x.com" target="_blank" rel="noopener noreferrer">
+        <Link
+          href="https://x.com/kheowzooFROMSOL"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaTwitter className="text-xl hover:opacity-80" />
         </Link>
-        <Link href="https://telegram.org" target="_blank" rel="noopener noreferrer">
+        <Link
+          href="https://t.me/kheowzooCHINA"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaTelegramPlane className="text-xl hover:opacity-80" />
         </Link>
       </div>
@@ -57,6 +65,13 @@ export default function Header() {
           onClick={() => setIsMobileMenuOpen(false)}
         >
           About
+        </Link>
+        <Link
+          href="/featured"
+          className="block px-4 py-2 text-lg font-medium hover:underline md:px-0 md:py-0 md:hover:underline"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          Featured
         </Link>
         <Link
           href="/gallery"
