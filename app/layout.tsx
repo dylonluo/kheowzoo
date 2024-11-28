@@ -16,7 +16,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "KheowZoo - Web3 Homepage",
+  title: "Kheowzoo",
   description:
     "Experience the next generation of Web3 technology with KheowZoo.",
   keywords: ["KheowZoo", "Web3", "Blockchain", "NFTs", "Material Library"],

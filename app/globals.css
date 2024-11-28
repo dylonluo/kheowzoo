@@ -7,11 +7,20 @@
   --primary-color: #d4af37; /* Golden yellow */
   --secondary-color: #8b4513; /* Brown */
   --accent-color: #228b22; /* Green */
+  --overlay-color: rgba(34, 139, 34, 0.2);
 }
 
 /* Global styles */
 body {
-  @apply bg-cover bg-center bg-no-repeat antialiased;
+  @apply bg-cover bg-center bg-no-repeat antialiased relative;
   background-image: url("/bg.jpg");
   color: var(--primary-color); /* Default text color */
+}
+
+/* Overlay for the background */
+body::before {
+  content: "";
+  @apply absolute top-0 left-0 w-full h-full z-0;
+  background-color: var(--overlay-color);
+  pointer-events: none;
 }
