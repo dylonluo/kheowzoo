@@ -6,7 +6,8 @@ import Link from "next/link";
 //import IconGrid from "./IconGrid";
 
 export default function Hero(): JSX.Element {
-  const contractAddress: string = "AiQcnL5gPjEXVH1E1FGUdN1WhPz4qXAZfQJxpGrJpump";
+  const contractAddress: string =
+    "AiQcnL5gPjEXVH1E1FGUdN1WhPz4qXAZfQJxpGrJpump";
   const [showToast, setShowToast] = useState<boolean>(false);
 
   const copyToClipboard = (): void => {
@@ -32,6 +33,10 @@ export default function Hero(): JSX.Element {
         <h1 className="text-3xl md:text-6xl font-bold mb-6 animate__animated animate__fadeIn animate__delay-1s">
           Welcome to Kheowzoo
         </h1>
+        <p className="text-xl font-semibold text-green-300 md:text-2xl mb-6 animate__animated animate__fadeIn animate__delay-2s">
+          Explore the cutting edge of blockchain-powered conservation. Join a
+          community redefining the future of wildlife and Web3 technology.
+        </p>
         <h2 className="text-lg md:text-xl font-bold text-color-primary animate__animated animate__fadeIn animate__delay-3s">
           Contract Address
         </h2>
@@ -62,7 +67,6 @@ export default function Hero(): JSX.Element {
       </div>
 
       {/* Include the IconGrid component */}
-   
 
       {showToast && (
         <div className="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow-md animate__animated animate__fadeInUp">
