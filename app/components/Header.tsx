@@ -66,6 +66,13 @@ export default function Header() {
           Gallery
         </Link>
         <Link
+          href="/tweets"
+          className="block px-4 py-2 text-lg font-medium hover:underline md:px-0 md:py-0 md:hover:underline"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          Tweets
+        </Link>
+        <Link
           href="/contact"
           className="block px-4 py-2 text-lg font-medium hover:underline md:px-0 md:py-0 md:hover:underline"
           onClick={() => setIsMobileMenuOpen(false)}

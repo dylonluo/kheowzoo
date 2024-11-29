@@ -1,18 +1,14 @@
 import type { Metadata } from "next";
-//import localFont from "next/font/local";
-//import Header from "./components/Header";
-//import Footer from "./components/Footer";
 import "./globals.css";
-
-
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Kheowzoo",
-  description:
-    "Experience the next generation of Web3 technology with KheowZoo.",
+  description: "Experience the next generation of Web3 technology with KheowZoo.",
   keywords: ["KheowZoo", "Web3", "Blockchain", "NFTs", "Material Library"],
   authors: [{ name: "KheowZoo Team" }],
-  viewport: "width=device-width, initial-scale=1",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
 };
 
 export default function RootLayout({
@@ -41,16 +37,14 @@ export default function RootLayout({
           content={
             typeof metadata.viewport === "string"
               ? metadata.viewport
-              : "width=device-width, initial-scale=1"
+              : "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
           }
         />
       </head>
-      <body
-        className="scroll-smooth"
-      >
-       
+      <body className="scroll-smooth">
+        <Header />
         <main className="min-h-screen">{children}</main>
-   
+        <Footer />
       </body>
     </html>
   );

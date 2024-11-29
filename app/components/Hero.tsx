@@ -16,8 +16,8 @@ export default function Hero(): JSX.Element {
   };
 
   return (
-    <div className="hero-section flex flex-col items-center justify-start w-full relative text-white">
-      <div className="w-full h-[40vh] md:h-[50vh] relative">
+    <div className="hero-section flex flex-col items-center justify-center  w-full relative text-white">
+      <div className="w-full mt-12 h-[20vh] md:h-[30vh] relative">
         <Image
           src="/banner.png"
           alt="Hero Banner"
@@ -35,11 +35,12 @@ export default function Hero(): JSX.Element {
         <h2 className="text-lg md:text-xl font-bold text-color-primary animate__animated animate__fadeIn animate__delay-3s">
           Contract Address
         </h2>
+      
         <p
-          className="text-lg font-medium mx-4 md:text-2xl px-8 text-white underline cursor-pointer mt-2 animate__animated animate__fadeIn animate__delay-3s"
+          className="text-lg font-medium mx-4 md:text-2xl px-8 text-white underline cursor-pointer mt-2 animate__animated animate__fadeIn animate__delay-4s"
           onClick={copyToClipboard}
         >
-          {contractAddress}
+       AiQcnL5gPjEXVH1E1FGUdN1WhPz<br />4qXAZfQJxpGrJpump
         </p>
         <a
           href={`https://solscan.io/token/${contractAddress}`}
