@@ -2,26 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import Comic Sans */
+
 @import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap');
 
-/* Theme colors */
+
 :root {
-  --primary-color: #d4af37; /* Golden yellow */
-  --secondary-color: #8b4513; /* Brown */
-  --accent-color: #228b22; /* Green */
+  --primary-color: #d4af37; 
+  --secondary-color: #8b4513; 
+  --accent-color: #228b22; 
   --bg-color: #b5530e;
   --overlay-color: rgba(25, 76, 25, 0.4);
 }
 
 body {
   @apply bg-cover bg-center bg-no-repeat antialiased relative;
-  background-color: var(--bg-color); /* Brown background */
-  color: var(--primary-color); /* Default text color */
-  font-family: "Comic Sans MS", "Comic Sans", cursive; /* Fallbacks included */
+  background-color: var(--bg-color);
+  color: var(--primary-color); 
+  font-family: "Comic Sans MS", "Comic San", cursive;
 }
 
-/* Optional: Apply Comic Sans to specific elements */
+
 h1, h2, p, a, button {
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: "Comic Sans MS", "Comic San", cursive;
 }

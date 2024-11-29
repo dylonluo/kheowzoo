@@ -18,7 +18,7 @@ export default function Header() {
           width={40}
           height={40}
         />
-        <Link href="/" className="hover:opacity-80">
+        <Link href="/" className="hover:opacity-80 font-sans text-xl md:text-2xl">
           Kheowzoo
         </Link>
       </div>
