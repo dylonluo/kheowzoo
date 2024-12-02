@@ -47,21 +47,21 @@ export default function Header() {
           About
         </Link>
         <Link
-          href="/gallery"
+          href="/news"
           className="block px-4 py-2 text-lg font-medium hover:underline md:px-0 md:py-0 md:hover:underline"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           News
         </Link>
         <Link
-          href="/news"
+          href="/gallery"
           className="block px-4 py-2 text-lg font-medium hover:underline md:px-0 md:py-0 md:hover:underline"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           Gallery
         </Link>
         <Link
-          href="/news"
+          href="/rescue"
           className="block px-4 py-2 text-lg text-green-500 hover:text-green-300 font-medium hover:underline md:px-0 md:py-0 md:hover:underline"
           onClick={() => setIsMobileMenuOpen(false)}
         >
