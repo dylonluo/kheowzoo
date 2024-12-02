@@ -71,15 +71,24 @@ export default function IconGrid(): JSX.Element {
           href="https://t.me/kheowzoo001"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-4xl text-gray-200 mt-2 py-1 hover:scale-110 hover:text-gray-300 mx-auto"
+          className="text-4xl text-black mt-2 py-1 hover:scale-110 hover:text-gray-300 mx-auto"
         >
           <FaTelegramPlane />
         </Link>
+
         <Link
           href="https://x.com/kheowzooFROMSOL"
           target="_blank"
           rel="noopener noreferrer"
           className="text-4xl text-green-200 mt-2 py-1 hover:scale-110 hover:text-green-300 mx-auto"
+        >
+          <FaTwitter />
+        </Link>
+        <Link
+          href="https://x.com/kzoo_cto?s=21&t=pJn57akjnssvCPVZ-pc6ZQ"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-4xl text-black mt-2 py-1 hover:scale-110 hover:text-green-300 mx-auto"
         >
           <FaTwitter />
         </Link>

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
+//import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
 import { MdMenu, MdClose } from "react-icons/md";
 
 export default function Header() {
@@ -12,24 +12,12 @@ export default function Header() {
     <header className="bg-[#8b4513] fixed top-0 left-0 w-full z-50 text-white py-4 px-6 flex justify-between items-center shadow-md">
       {/* Logo */}
       <div className="flex items-center text-2xl font-bold space-x-2">
-        <Image
-          src="/logo.png" // Replace with your logo's file name
-          alt="Kheowzoo Logo"
-          width={40}
-          height={40}
-        />
-        <Link href="/" className="hover:opacity-80 font-sans text-xl md:text-2xl">
+        <Image src="/logo.png" alt="Kheowzoo Logo" width={40} height={40} />
+        <Link
+          href="/"
+          className="hover:opacity-80 font-sans text-xl md:text-2xl"
+        >
           Kheowzoo
-        </Link>
-      </div>
-
-      {/* Social Icons */}
-      <div className="flex space-x-4 md:space-x-6">
-        <Link href="https://x.com" target="_blank" rel="noopener noreferrer">
-          <FaTwitter className="text-xl hover:opacity-80" />
-        </Link>
-        <Link href="https://telegram.org" target="_blank" rel="noopener noreferrer">
-          <FaTelegramPlane className="text-xl hover:opacity-80" />
         </Link>
       </div>
 
@@ -63,29 +51,25 @@ export default function Header() {
           className="block px-4 py-2 text-lg font-medium hover:underline md:px-0 md:py-0 md:hover:underline"
           onClick={() => setIsMobileMenuOpen(false)}
         >
+          News
+        </Link>
+        <Link
+          href="/news"
+          className="block px-4 py-2 text-lg font-medium hover:underline md:px-0 md:py-0 md:hover:underline"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
           Gallery
         </Link>
         <Link
-          href="/tweets"
-          className="block px-4 py-2 text-lg font-medium hover:underline md:px-0 md:py-0 md:hover:underline"
+          href="/news"
+          className="block px-4 py-2 text-lg text-green-500 hover:text-green-300 font-medium hover:underline md:px-0 md:py-0 md:hover:underline"
           onClick={() => setIsMobileMenuOpen(false)}
         >
-          Tweets
-        </Link>
-        <Link
-          href="/contact"
-          className="block px-4 py-2 text-lg font-medium hover:underline md:px-0 md:py-0 md:hover:underline"
-          onClick={() => setIsMobileMenuOpen(false)}
-        >
-          Contact
-        </Link>
-        <Link
-          href="https://jup.ag/swap/SOL-AiQcnL5gPjEXVH1E1FGUdN1WhPz4qXAZfQJxpGrJpump"
-          target="_blank"
-          passHref
-          className="inline-block mt-0 px-6 py-3 bg-green-500 hover:bg-green-600 text-white text-lg font-medium rounded transition-colors animate__animated animate__fadeIn animate__delay-4s"
-        >
-          Buy Now
+          <p className="text-center">
+            Charity for helping
+            <br />
+            stray animals⁣
+          </p>
         </Link>
       </nav>
     </header>

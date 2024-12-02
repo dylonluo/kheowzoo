@@ -25,7 +25,7 @@ const videoPreviews: VideoPreview[] = [
   {
     src: "/WebGallery/videos/vid2.mp4",
     title: "Khewozoo to the moon!!",
-    caption: "Leggoo!!",
+    caption: "Leggo",
   },
 ];
 
@@ -160,7 +160,7 @@ export default function Gallery() {
         </div>
       </section>
 
-      {/* Fullscreen Video Player */}
+      {/* Video Player */}
       {selectedVideo && (
         <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50">
           <video

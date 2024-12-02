@@ -34,18 +34,20 @@ export default function Hero(): JSX.Element {
           Welcome to Kheowzoo
         </h1>
         <p className="text-xl font-semibold text-green-300 md:text-2xl mb-6 animate__animated animate__fadeIn animate__delay-2s">
-          Explore the cutting edge of blockchain-powered conservation. Join a
-          community redefining the future of wildlife and Web3 technology.
+          Join our community, Let&appos;s create a haven for all animals and
+          crypto enthusiasts together!
         </p>
         <h2 className="text-lg md:text-xl font-bold text-color-primary animate__animated animate__fadeIn animate__delay-3s">
           Contract Address
         </h2>
-      
+
         <p
           className="text-lg font-medium mx-4 md:text-2xl px-8 text-white underline cursor-pointer mt-2 animate__animated animate__fadeIn animate__delay-4s"
           onClick={copyToClipboard}
         >
-       AiQcnL5gPjEXVH1E1FGUdN1WhPz<br />4qXAZfQJxpGrJpump
+          AiQcnL5gPjEXVH1E1FGUdN1WhPz
+          <br />
+          4qXAZfQJxpGrJpump
         </p>
         <a
           href={`https://solscan.io/token/${contractAddress}`}
