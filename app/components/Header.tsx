@@ -65,11 +65,7 @@ export default function Header() {
           className="block px-4 py-2 text-lg text-green-500 hover:text-green-300 font-medium hover:underline md:px-0 md:py-0 md:hover:underline"
           onClick={() => setIsMobileMenuOpen(false)}
         >
-          <p className="text-center">
-            Charity for helping
-            <br />
-            stray animals⁣
-          </p>
+          Rescuing Stray Animals⁣
         </Link>
       </nav>
     </header>
