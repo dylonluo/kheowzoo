@@ -34,8 +34,8 @@ export default function Hero(): JSX.Element {
           Welcome to Kheowzoo
         </h1>
         <p className="text-xl font-semibold text-green-300 md:text-2xl mb-6 animate__animated animate__fadeIn animate__delay-2s">
-          Join our community, Let&appos;s create a haven for all animals and
-          crypto enthusiasts together!
+          Join our community, Let's create a haven for all animals and crypto
+          enthusiasts together!
         </p>
         <h2 className="text-lg md:text-xl font-bold text-color-primary animate__animated animate__fadeIn animate__delay-3s">
           Contract Address
