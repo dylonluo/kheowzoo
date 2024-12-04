@@ -27,6 +27,11 @@ const videoPreviews: VideoPreview[] = [
     title: "Khewozoo to the moon!!",
     caption: "Leggo",
   },
+  {
+    src: "/WebGallery/videos/vid3.mp4",
+    title: "New video",
+    caption: "Charity to rescue stray animals",
+  },
 ];
 
 export default function Gallery() {
