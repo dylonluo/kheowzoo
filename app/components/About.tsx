@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 export default function AboutKheowzoo() {
   const [activeTab, setActiveTab] = useState<"who" | "why" | "vision">("who");
@@ -44,9 +45,11 @@ export default function AboutKheowzoo() {
           {activeTab === "who" && (
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-1">
-                <img
+                <Image
                   src="/WebGallery/photos/img18.jpg"
                   alt="Kheowzoo Team"
+                  width={500}
+                  height={300}
                   className="rounded-lg shadow-lg"
                 />
               </div>
@@ -58,17 +61,17 @@ export default function AboutKheowzoo() {
                   Home of Meme Animals! Led by a Chinese team as a CTO project,
                   kheowzoo gives every meme animal a home and provides a place
                   for crypto players tired of endless PVP. kheowzoo is the
-                  world's first CTO leading project promoted by the Chinese
+                  world&apos;s first CTO leading project promoted by the Chinese
                   community. The community adheres to long-term construction and
                   opposes the current vicious PVP infringement on meme culture.
                 </p>
                 <p className="mt-4">
                   With the purpose of creating a cultural home for harmony and
                   co-prosperity in the crypto world, the community is committed
-                  to "providing a home for all stray animals and a home for all
-                  homeless meme holders." We call on meme lovers who love peace
-                  and are enthusiastic about building cultural communities to
-                  join us.
+                  to &quot;providing a home for all stray animals and a home for
+                  all homeless meme holders.&quot; We call on meme lovers who
+                  love peace and are enthusiastic about building cultural
+                  communities to join us.
                 </p>
               </div>
             </div>
@@ -82,23 +85,25 @@ export default function AboutKheowzoo() {
                   Home of Meme Animals! Led by a Chinese team as a CTO project,
                   kheowzoo gives every meme animal a home and provides a place
                   for crypto players tired of endless PVP. kheowzoo is the
-                  world's first CTO leading project promoted by the Chinese
+                  world&apos;s first CTO leading project promoted by the Chinese
                   community. The community adheres to long-term construction and
                   opposes the current vicious PVP infringement on meme culture.
                 </p>
                 <p className="mt-4">
                   With the purpose of creating a cultural home for harmony and
                   co-prosperity in the crypto world, the community is committed
-                  to "providing a home for all stray animals and a home for all
-                  homeless meme holders." We call on meme lovers who love peace
-                  and are enthusiastic about building cultural communities to
-                  join us.
+                  to &quot;providing a home for all stray animals and a home for
+                  all homeless meme holders.&quot; We call on meme lovers who
+                  love peace and are enthusiastic about building cultural
+                  communities to join us.
                 </p>
               </div>
               <div className="flex-1">
-                <img
+                <Image
                   src="/WebGallery/photos/img26.jpg"
                   alt="Kheowzoo Features"
+                  width={500}
+                  height={300}
                   className="rounded-lg shadow-lg"
                 />
               </div>
@@ -111,7 +116,6 @@ export default function AboutKheowzoo() {
                 Vision and Mission
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Vision Card */}
                 <div className="bg-[#964B00] shadow-lg rounded-lg p-6 text-center">
                   <h4 className="text-xl font-semibold text-color-primary mb-4">
                     Our Vision
@@ -123,7 +127,6 @@ export default function AboutKheowzoo() {
                   </p>
                 </div>
 
-                {/* Mission Card */}
                 <div className="bg-[#964B00] shadow-lg rounded-lg p-6 text-center">
                   <h4 className="text-xl font-semibold text-color-primary mb-4">
                     Our Mission
