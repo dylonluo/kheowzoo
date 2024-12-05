@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
 
