@@ -155,12 +155,12 @@ export default function Gallery() {
           </div>
 
           <div className="flex justify-center mt-8">
-            <Link
+            {/* <Link
               href="/more"
               className="inline-block bg-color-primary text-color-bg py-3 px-8 rounded-lg text-xl font-semibold hover:underline hover:bg-opacity-90 transition"
             >
               View More
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
