@@ -50,14 +50,14 @@ export default function AboutKheowzoo() {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <motion.div {...imageAnimation} className="flex-1">
                 <Image
-                  src="/WebGallery/photos/img18.jpg"
+                  src="/WebGallery/photos/img58.jpg"
                   alt="Kheowzoo Team"
                   width={500}
                   height={300}
                   className="rounded-lg shadow-lg"
                   priority
                   placeholder="blur"
-                  blurDataURL="/WebGallery/photos/blurred-img18.jpg"
+                  blurDataURL="/WebGallery/photos/blurred-img58.jpg"
                 />
               </motion.div>
               <motion.div
