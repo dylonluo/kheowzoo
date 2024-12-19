@@ -4,12 +4,16 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-//import IconGrid from "./IconGrid";
+// import { Locale } from "@/i18n-config";
+// import { getDictionary } from "@/get-dictionaries";
 
-export default function Hero(): JSX.Element {
-  const contractAddress: string =
-    "AiQcnL5gPjEXVH1E1FGUdN1WhPz4qXAZfQJxpGrJpump";
+const contractAddress: string = "AiQcnL5gPjEXVH1E1FGUdN1WhPz4qXAZfQJxpGrJpump";
+
+export default function Hero({ dictionary }): JSX.Element {
+  // const dictionary = getDictionary(lang);
+
   const [showToast, setShowToast] = useState<boolean>(false);
+  console.log("dictionary", dictionary);
 
   const copyToClipboard = (): void => {
     navigator.clipboard.writeText(contractAddress);
@@ -21,25 +25,23 @@ export default function Hero(): JSX.Element {
     <div className="hero-section flex flex-col items-center justify-center  w-full relative text-white">
       <div className="w-full mt-12 h-[20vh] md:h-[30vh] relative">
         <Image
-          src="/banner.png"
+          src="/images/banner.png"
           alt="Hero Banner"
-          layout="fill"
-          objectFit="cover"
+          className="absolute top-0 left-0 object-fill"
+          fill
           priority
-          className="absolute top-0 left-0"
         />
       </div>
 
       <div className="z-10 px-4 max-w-4xl text-center mt-6">
         <h1 className="text-3xl md:text-6xl font-bold mb-6 animate__animated animate__fadeIn animate__delay-1s">
-          Welcome to Kheowzoo
+          {dictionary.home.welcome}
         </h1>
         <p className="text-xl font-semibold text-green-300 md:text-2xl mb-6 animate__animated animate__fadeIn animate__delay-2s">
-          Join our community, Let's create a haven for all animals and crypto
-          enthusiasts together!
+          {dictionary.hero.join}
         </p>
         <h2 className="text-lg md:text-xl font-bold text-color-primary animate__animated animate__fadeIn animate__delay-3s">
-          Contract Address
+          {dictionary.hero.contractAddress}
         </h2>
 
         <p
@@ -56,7 +58,7 @@ export default function Hero(): JSX.Element {
           rel="noopener noreferrer"
           className="block mt-4 text-[#5a3310] text-2xl font-bold underline animate__animated animate__fadeIn animate__delay-3s"
         >
-          View on Solscan
+          {dictionary.hero.viewOnSolscan}
         </a>
 
         <Link
@@ -65,7 +67,7 @@ export default function Hero(): JSX.Element {
           passHref
           className="inline-block mt-6 px-6 py-3 bg-green-500 hover:bg-green-600 text-white text-lg font-bold rounded transition-colors animate__animated animate__fadeIn animate__delay-4s"
         >
-          Buy Now
+          {dictionary.hero.buyNow}
         </Link>
       </div>
 

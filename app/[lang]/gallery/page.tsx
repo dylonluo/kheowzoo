@@ -3,7 +3,8 @@ import React, { useState, useMemo } from "react";
 import Image from "next/image";
 // import Link from "next/link";
 import { motion } from "framer-motion";
-import Header from "../components/Header";
+import { Locale } from "@/i18n-config";
+
 
 interface VideoPreview {
   src: string;
@@ -34,12 +35,14 @@ const videoPreviews: VideoPreview[] = [
   },
 ];
 
-export default function Gallery() {
+export default function Gallery({ lang }: { lang: Locale }) {
   const [activeTab, setActiveTab] = useState<"images" | "videos">("images");
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [videoStates, setVideoStates] = useState(
     videoPreviews.map(() => ({ muted: true, isPlaying: false }))
   );
+  
+
 
   const images = useMemo<string[]>(
     () => Array.from({ length: 57 }, (_, i) => `img${i + 1}.jpg`),
@@ -64,14 +67,12 @@ export default function Gallery() {
 
   return (
     <div>
-      <div>
-        <Header />
-      </div>
       <section className="pt-16 pb-8 w-full bg-black/50" id="gallery">
         <div className="max-w-7xl mx-auto mt-8 px-6">
-          <h2 className="text-3xl font-bold text-center mb-0 text-white">
-            Gallery
-          </h2>
+          {/* <h2 className="text-3xl font-bold text-center mb-0 text-white">
+          {lang === "en" ? "Gallery" : "相册"}
+
+          </h2> */}
 
           {/* Tab Navigation */}
           <div className="flex justify-center mb-8">
@@ -90,7 +91,7 @@ export default function Gallery() {
               } hover:text-green-400 transition`}
             >
               Videos
-            </button>
+              </button>
           </div>
 
           {/* Tab Content */}

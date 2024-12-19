@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-[#8b4513] text-white py-4 px-6 text-center">
@@ -6,7 +7,7 @@ export default function Footer() {
       <p>
         Follow us on{" "}
         <Link href="https://x.com/kheowzooFROMSOL" className="underline">
-         X
+          X
         </Link>
         .
       </p>

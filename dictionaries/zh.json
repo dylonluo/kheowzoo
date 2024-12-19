@@ -1,0 +1,38 @@
+{
+  "home": {
+    "title": "首页",
+    "welcome": "欢迎来到 Kheowzoo"
+  },
+  "about": {
+    "title": "关于我们",
+    "whoWeAreA": "meme动物之家！由一个中国团队发起并作为一项 CTO 项目，kheowzoo 为每一个meme动物提供了一个家，同时为那些厌倦了无休止 PVP 的加密玩家创造了一个全新的空间。kheowzoo 是全球首个由 CTO 领导并由中国社区推动的项目。社区秉持长期建设的理念，反对当前恶性 PVP 对梗文化的侵害",
+    "whoWeAreB": "社区致力于在加密世界中打造一个和谐共荣的文化之家，为所有流浪动物提供一个温暖的家，为所有无归属的meme coin持有者提供一个归宿。我们呼吁热爱和平并热衷于建设文化社区的meme爱好者加入我们",
+    "whyUs": "梗动物之家！由中国团队作为一项CTO项目发起，kheowzoo为每一个梗动物提供了一个归宿，同时为那些厌倦了无休止PVP的加密玩家创造了一个全新的空间。",
+    "visionAndMission": "愿景和使命",
+    "whoWeAreContent": "我们是一个由中国团队领导的项目，致力于为每一个 meme 动物提供一个家。",
+    "whyUsContent": "我们为厌倦了无休止 PVP 的加密玩家提供一个避风港。",
+    "missionAndVision": "愿景和使命",
+    "visionTitle": "我们的愿景",
+    "vision" : "我们的愿景是通过创建一个数字生态系统，打造全新meme环境",
+    "mission": "我们的使命是通过最先进的技术赋能用户和社区，促进增长和可持续发展。",
+    "missionTitle" : "我们的使命"
+  },
+  "header": {
+    "title": "kheowzoo",
+    "home": "首页",
+    "about": "关于我们",
+    "gallery": "画廊",
+    "rescue": "救助流浪动物"
+  },
+  "hero": {
+    "join": "加入我们的社区，让我们一起为所有动物和加密爱好者创造一个避风港！",
+    "contractAddress": "合约地址",
+    "viewOnSolscan": "Solscan详情",
+    "buyNow": "点击购买",
+    "copied": "合约地址已复制到剪贴板！"
+  },
+  "gallery": {
+    "title": "相册",
+    "description": "Check out our gallery of rescued animals and their stories."
+  }
+}

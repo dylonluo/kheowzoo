@@ -13,7 +13,7 @@ export default function IconGrid(): JSX.Element {
           rel="noopener noreferrer"
         >
           <Image
-            src="/dextool.png"
+            src="/images/dextool.png"
             alt="Dextools"
             width={50}
             height={50}
@@ -21,13 +21,13 @@ export default function IconGrid(): JSX.Element {
           />
         </Link>
         <Link
-          href="https://jup.ag/swap/SOL-AiQcnL5gPjEXVH1E1FGUdN1WhPz4qXAZfQJxpGrJpump"
+          href="https://gmgn.ai/sol/token/edt2ItNX_AiQcnL5gPjEXVH1E1FGUdN1WhPz4qXAZfQJxpGrJpump"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
-            src="/solscan.png"
-            alt="Solscan"
+            src="/images/gmgn.png"
+            alt="Gmgn"
             width={50}
             height={50}
             className="mx-auto hover:scale-110"
@@ -39,7 +39,7 @@ export default function IconGrid(): JSX.Element {
           rel="noopener noreferrer"
         >
           <Image
-            src="/dex-screener.png"
+            src="/images/dex-screener.png"
             alt="Dex Screen"
             width={50}
             height={50}
@@ -52,7 +52,7 @@ export default function IconGrid(): JSX.Element {
           rel="noopener noreferrer"
         >
           <Image
-            src="/coin-gecko.png"
+            src="/images/coin-gecko.png"
             alt="Coin Gecko"
             width={100}
             height={100}
@@ -75,15 +75,14 @@ export default function IconGrid(): JSX.Element {
         >
           <FaTelegramPlane />
         </Link>
-
-        <Link
-          href="https://x.com/kheowzooFROMSOL"
+        {/* <Link
+          href="https://x.com/kzoo_cto?s=21&t=pJn57akjnssvCPVZ-pc6ZQ"
           target="_blank"
           rel="noopener noreferrer"
           className="text-4xl text-green-200 mt-2 py-1 hover:scale-110 hover:text-green-300 mx-auto"
         >
           <FaTwitter />
-        </Link>
+        </Link> */}
         <Link
           href="https://x.com/kzoo_cto?s=21&t=pJn57akjnssvCPVZ-pc6ZQ"
           target="_blank"
@@ -91,6 +90,20 @@ export default function IconGrid(): JSX.Element {
           className="text-4xl text-black mt-2 py-1 hover:scale-110 hover:text-green-300 mx-auto"
         >
           <FaTwitter />
+        </Link>
+	<Link
+          href="https://www.tiktok.com/@kheowzoo8?_t=8sFK14NpNry&_r=1"
+          target="_blank"
+          rel="noopener noreferrer"
+         className="text-4xl text-black mt-2 py-1 hover:scale-110 hover:text-green-300 mx-auto"
+	 >
+        <Image
+            src="/images/tiktok.png"
+            alt="Dex Screen"
+            width={50}
+            height={50}
+            className="mx-auto hover:scale-110"
+          />
         </Link>
       </div>
     </div>

@@ -1,0 +1,38 @@
+{
+  "home": {
+    "title": "Home",
+    "welcome": "Welcome to Kheowzoo"
+  },
+  "about": {
+    "title": "About Us",
+    "whoWeAreA": "Home of Meme Animals! Led by a Chinese team as a CTO project, kheowzoo gives every meme animal a home and provides a place for crypto players tired of endless PVP. kheowzoo is the world&apos;s first CTO leading project promoted by the Chinese community. The community adheres to long-term construction and opposes the current vicious PVP infringement on meme culture.",
+    "whoWeAreB": "With the purpose of creating a cultural home for harmony and co-prosperity in the crypto world, the community is committed to providing a home for all stray animals and a home for all homeless meme holders. We call on meme lovers who love peace and are enthusiastic about building cultural communities to join us.",
+    "whyUs": "Home of Meme Animals! Led by a Chinese team as a CTO project, kheowzoo gives every meme animal a home and provides a placefor crypto players tired of endless PVP.",
+    "visionAndMission": "Vision and Mission",
+    "whoWeAreContent": "We are a project led by a Chinese team, dedicated to providing a home for every meme animal.",
+    "whyUsContent": "We provide a haven for crypto players tired of endless PVP.",
+    "missionAndVision":"Vision and Mission",
+    "vision": "Our vision is to lead the global Web3 revolution by creating a digital ecosystem.",
+    "visionTitle" : "Our Vision",
+    "mission": "Our mission is to empower users and communities through state-of-the-art technology, promoting growth and sustainability.",
+    "missionTitle" : "Our Mission"
+  },
+  "header": {
+    "title": "Website Title",
+    "home": "Home",
+    "about": "About Us",
+    "gallery": "Gallery",
+    "rescue": "Rescuing Stray Animals"
+  },
+  "hero": {
+    "join": "Join our community, Let's create a haven for all animals and crypto enthusiasts together!",
+    "contractAddress": "Contract Address",
+    "viewOnSolscan": "View on Solscan",
+    "buyNow": "Buy Now",
+    "copied": "Contract Address copied to clipboard!"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "description": "Check out our gallery of rescued animals and their stories."
+  }
+}

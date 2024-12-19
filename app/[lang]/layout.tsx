@@ -1,23 +1,40 @@
 import type { Metadata } from "next";
-import "./globals.css";
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+import type { Locale } from "@/i18n-config";
+import { i18n } from "@/i18n-config";
+
+import "./globals.css";
+
+interface RootLayoutProps {
+  children: React.ReactNode;
+  params: { lang: Locale };
+}
+
 export const metadata: Metadata = {
   title: "Kheowzoo",
-  description: "Experience the next generation of Web3 technology with KheowZoo.",
+  description:
+    "Experience the next generation of Web3 technology with KheowZoo.",
   keywords: ["KheowZoo", "Web3", "Blockchain", "NFTs", "Material Library"],
   authors: [{ name: "KheowZoo Team" }],
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
+  viewport:
+    "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
 };
 
-export default function RootLayout({
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
+
+export default async function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  params,
+}: RootLayoutProps) {
+  const { lang } = await params;
+  console.log(lang);
   return (
-    <html lang="en">
+    <html lang={lang}>
       <head>
         <title>{String(metadata.title) ?? "Default Title"}</title>
         <meta
@@ -42,9 +59,9 @@ export default function RootLayout({
         />
       </head>
       <body className="scroll-smooth">
-        <Header />
+        <Header lang={lang} />
         <main className="min-h-screen">{children}</main>
-        <Footer />
+        <Footer lang={lang} />
       </body>
     </html>
   );
