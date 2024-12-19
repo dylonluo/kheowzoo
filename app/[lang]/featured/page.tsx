@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Header from "../components/Header";
 
 interface BlogPost {
   id: number;
@@ -106,9 +105,6 @@ export default function Featured() {
 
   return (
     <div>
-      <div>
-        <Header />
-      </div>
       <section
         id="featured"
         className="w-full h-[600px] mt-8 pt-16 pb-8 bg-black"

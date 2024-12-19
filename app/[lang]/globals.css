@@ -18,10 +18,10 @@ body {
   @apply bg-cover bg-center bg-no-repeat antialiased relative;
   background-color: var(--bg-color);
   color: var(--primary-color); 
-  font-family: "Comic Sans MS", "Comic San", cursive;
+  font-family: "Arial", cursive;
 }
 
 
 h1, h2, p, a, button {
-  font-family: "Comic Sans MS", "Comic San", cursive;
+  font-family: "Arial", cursive;
 }

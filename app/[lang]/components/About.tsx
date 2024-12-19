@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function AboutKheowzoo() {
+
+
+export default function AboutKheowzoo({dictionary}) {
   const [activeTab, setActiveTab] = useState<"who" | "why" | "vision">("who");
 
   const imageAnimation = {
@@ -68,20 +70,10 @@ export default function AboutKheowzoo() {
                   Kheowzoo CTO:
                 </h3>
                 <p>
-                  Home of Meme Animals! Led by a Chinese team as a CTO project,
-                  kheowzoo gives every meme animal a home and provides a place
-                  for crypto players tired of endless PVP. kheowzoo is the
-                  world&apos;s first CTO leading project promoted by the Chinese
-                  community. The community adheres to long-term construction and
-                  opposes the current vicious PVP infringement on meme culture.
+                  {dictionary.about.whoWeAreA}
                 </p>
                 <p className="mt-4">
-                  With the purpose of creating a cultural home for harmony and
-                  co-prosperity in the crypto world, the community is committed
-                  to &quot;providing a home for all stray animals and a home for
-                  all homeless meme holders.&quot; We call on meme lovers who
-                  love peace and are enthusiastic about building cultural
-                  communities to join us.
+                  {dictionary.about.whoWeAreB}
                 </p>
               </motion.div>
             </div>
@@ -106,9 +98,7 @@ export default function AboutKheowzoo() {
               >
                 <h3 className="text-2xl font-bold mb-4 text-white">Why Us</h3>
                 <p>
-                  Home of Meme Animals! Led by a Chinese team as a CTO project,
-                  kheowzoo gives every meme animal a home and provides a place
-                  for crypto players tired of endless PVP.
+                  {dictionary.about.whyUsContent}
                 </p>
               </motion.div>
             </div>
@@ -117,7 +107,7 @@ export default function AboutKheowzoo() {
           {activeTab === "vision" && (
             <motion.div {...textAnimation} className="px-8">
               <h3 className="text-2xl font-bold mb-4 text-white">
-                Vision and Mission
+                {dictionary.about.missionAndVision}  
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <motion.div
@@ -125,11 +115,10 @@ export default function AboutKheowzoo() {
                   className="bg-[#964B00] shadow-lg rounded-lg p-6 text-center"
                 >
                   <h4 className="text-xl font-semibold text-color-primary mb-4">
-                    Our Vision
+                    {dictionary.about.visionTitle}
                   </h4>
                   <p className="text-white">
-                    To lead the global Web3 revolution by creating a digital
-                    ecosystem that fosters innovation and inclusivity.
+                    {dictionary.about.vision}
                   </p>
                 </motion.div>
 
@@ -138,11 +127,10 @@ export default function AboutKheowzoo() {
                   className="bg-[#964B00] shadow-lg rounded-lg p-6 text-center"
                 >
                   <h4 className="text-xl font-semibold text-color-primary mb-4">
-                    Our Mission
+                    {dictionary.about.missionTitle}
                   </h4>
                   <p className="text-white">
-                    Empowering users and communities through state-of-the-art
-                    technology, promoting growth and sustainability.
+                    {dictionary.about.mission}
                   </p>
                 </motion.div>
               </div>
